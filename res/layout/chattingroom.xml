@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.androidsns.ChattingRoomActivity" >
+
+    <Button
+        android:id="@+id/sndbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/sendfield"
+        android:text="Send" />
+
+    <EditText
+        android:id="@+id/sendfield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/sndbtn"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/sidemnu"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="side" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+
+        <fragment
+            android:id="@+id/frag1"
+            android:name="com.example.androidsns.NewFrag1Activity"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_weight="50" />
+
+        <fragment
+            android:id="@+id/frag2"
+            android:name="com.example.androidsns.VideoActivity"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="50" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/chatlist"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_above="@+id/sndbtn"
+        android:layout_below="@+id/linearLayout1" >
+    </ListView>
+
+</RelativeLayout>
